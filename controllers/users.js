@@ -45,4 +45,4 @@ module.exports.logout = (req, res) => {
     req.logout();
     req.flash('success', 'Logged out successfully!');
     res.redirect('/campgrounds')
-}
+};

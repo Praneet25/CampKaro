@@ -58,6 +58,3 @@ const seedDB = async function () {
 }
 
 seedDB()
-// .then(() => {
-//     db.connection.cl
-// })

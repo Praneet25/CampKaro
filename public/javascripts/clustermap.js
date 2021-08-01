@@ -1,4 +1,3 @@
-
 mapboxgl.accessToken = mapToken;
 const map = new mapboxgl.Map({
     container: 'map',
@@ -23,7 +22,7 @@ map.on('load', function () {
     });
 
     map.addLayer({
-               id: 'clusters',
+        id: 'clusters',
         type: 'circle',
         source: 'campgrounds',
         filter: ['has', 'point_count'],
@@ -79,7 +78,7 @@ map.on('load', function () {
         }
     });
 
-    // inspect a cluster on click
+    // inspect a cluster when clicked
     map.on('click', 'clusters', function (e) {
         const features = map.queryRenderedFeatures(e.point, {
             layers: ['clusters']
@@ -103,7 +102,9 @@ map.on('load', function () {
     // the location of the feature, with
     // description HTML from its properties.
     map.on('click', 'unclustered-point', function (e) {
-        const { popUpMarkup } = e.features[0].properties;
+        const {
+            popUpMarkup
+        } = e.features[0].properties;
         const coordinates = e.features[0].geometry.coordinates.slice();
 
         // Ensure that if the map is zoomed out such that

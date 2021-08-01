@@ -42,7 +42,6 @@ const seedDB = async function () {
                 }
             ],
             geometry: {
-                // coordinates: geoData.body.features[0].geometry.coordinates,
                 coordinates: [cities[randNum].lng, cities[randNum].lat],
                 type: 'Point'
             },

@@ -54,6 +54,6 @@ const seedDB = async function () {
     }
 
 
-}
+};
 
 seedDB()
